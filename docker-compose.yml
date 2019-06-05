@@ -6,8 +6,11 @@ services:
       - ./nginx.conf:/etc/nginx/nginx.conf
       - ./nginx/error.log:/etc/nginx/error_log.log
       - ./nginx/cache/:/etc/nginx/cache
+      - ./key.pem:/etc/nginx/conf.d/key.pem
+      - ./cert.pem:/etc/nginx/conf.d/cert.pem
     ports:
       - 80:80
+      - 443:443
 
   api:
     build: https://github.com/skippi/vnsegapi.git

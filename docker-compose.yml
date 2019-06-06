@@ -12,5 +12,8 @@ services:
       - 80:80
       - 443:443
 
+  web:
+    build: https://github.com/skippi/vnseg.git
+
   api:
     build: https://github.com/skippi/vnsegapi.git
